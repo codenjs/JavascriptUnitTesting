@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@section scripts {
+    <script type="text/javascript" src="@Url.Content("/Scripts/jquery-1.10.2.js")"></script>
+    <script type="text/javascript" src="@Url.Content("/Scripts/FizzBuzz.js")"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(document).on("click", "#fizzBuzzPrint", function () {
+                var input = $("#fizzBuzzInput").val();
+                var output = fizzBuzz.printAll(input);
+                $("#fizzBuzzOutput").html(output);
+            })
+        });
+    </script>
+}
+<div class="row">
+    <input type="text" id="fizzBuzzInput" />
+    <button id="fizzBuzzPrint">Print FizzBuzz</button>
+    <div id="fizzBuzzOutput"></div>
+</div>

@@ -1,0 +1,7 @@
+﻿{
+    "Framework": "mocha",
+    "References" : [
+      { "Path": "Scripts/chai.js" },
+      { "Path": "../SampleWebSite/Scripts/FizzBuzz.js" }
+    ]
+}
